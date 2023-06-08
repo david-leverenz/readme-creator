@@ -115,12 +115,15 @@ const linkObject = [
 const matchLicenseLink = linkObject.filter(function(linkObject) {
     
     if (linkObject.licenseName === inputs.license) {
+        // returning the correct answer in an array of one
         return [0];
     }
 
 });
 
+// need to figure out how to get the link from the one object array
 console.log(matchLicenseLink);
+// this doesn't work
 console.log(matchLicenseLink.licenseLink);
 
 // const licenseNameArray =['Apache license 2.0','Boost Software License 1.0','BSD 2-clause "Simplified" license','BSD 3-clause "New" or "Revised" license','Creative Commons Zero v1.0 Universal','Eclipse Public License 2.0','GNU Affero General Public License v3.0','GNU General Public License v3.0','GNU Lesser General Public License v2.1','MIT License','Mozilla Public License 2.0','The Unlicense']
