@@ -59,6 +59,6 @@ inquirer
     ])
     .then((responses) => console.log(responses));
 
-    module.exports = {
-        responses
-    };
+    // module.exports = {
+        // responses
+    // };
