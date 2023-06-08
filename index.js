@@ -2,23 +2,12 @@
 
 // Need to get the badges from a github link
 
-// const inquirer = require('inquirer');
-
 const fs = require('fs');
-const { default: inquirer } = require('inquirer');
+const inquirer = require('inquirer');
+const getData = require('./input.js')
+const path = require('path');
 
-const inputs = {
-    project_title: 'Fancy Thing',
-    description: 'It is a real fancy thing.',
-    installation: 'N/A',
-    usage: 'It is super easy to use.',
-    license: 'Boost Software License 1.0',
-    contributors: 'Poornima, Dom, Sam',
-    tests: 'No tests',
-    username: 'david-leverenz',
-    email: 'david.leverenz@gmail.com',
-    questions: 'For questions, please call Sam at home: 312-867-5309'
-  };  
+
 
 // const apacheLink = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
 // const boostLink = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
@@ -37,37 +26,37 @@ const inputs = {
 // var getLinkImage = function() {
 // if (inputs.license === 'Apache license 2.0'){
 //     let licenseImageLink = apacheLink;
-    
+
 // } else if (inputs.license === 'Boost Software License 1.0') {
 //     let licenseImageLink = boostLink;
-    
+
 // } else if (inputs.license === 'BSD 2-clause "Simplified" license'){
 //     let licenseImageLink = bsd2Link;
-    
+
 // } else if (inputs.license === 'BSD 3-clause "New" or "Revised" license'){
 //     let licenseImageLink = bsd3Link;
-    
+
 // } else if (inputs.license === 'Creative Commons Zero v1.0 Universal'){
 //     let licenseImageLink = creativeLink;
-    
+
 // } else if (inputs.license === 'Eclipse Public License 2.0'){
 //     let licenseImageLink = eclipseLink;
-    
+
 // } else if (inputs.license === 'GNU Affero General Public License v3.0'){
 //     let licenseImageLink = gnuAfferoLink;
-    
+
 // } else if (inputs.license === 'GNU General Public License v3.0'){
 //     let licenseImageLink = gnuGeneralLink;
-    
+
 // } else if (inputs.license === 'GNU Lesser General Public License v2.1'){
 //     let licenseImageLink = gnuLesserLink;
-    
+
 // } else if (inputs.license === 'MIT License'){
 //     let licenseImageLink = mitLink;
-    
+
 // } else if (inputs.license === 'Mozilla Public License 2.0'){
 //     let licenseImageLink = mozillaLink;
-    
+
 // } else licenseImageLink = unlicenseLink;
 
 // console.log(licenseImageLink)}
@@ -89,7 +78,7 @@ const inputs = {
 // ]
 
 // const matchLicenseLink = linkObject.filter(function(linkObject) {
-    
+
 //     if (linkObject.licenseName === inputs.license) {
 //         // returning the correct answer in an array of one
 //         return [0];
@@ -113,34 +102,54 @@ const inputs = {
 
 // console.log( JSON.stringify(result))
 
-function initialize() {
-    inquirer.prompt
+// function initialize() {
+//     inquirer.prompt
+// }
+
+
+
+// readMe();
+// console.log(readme);
+
+// readme(responses);
+
+// Function to write README file using the user input
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-const readme = function(inputs) {
+function readMe(data) {
+  return
+  // get image link
+  `## Project Title: ${data.project_title}<br>
+  ## Description<br>
+  ${data.description}<br>
+  ## Installation<br>
+  ${data.installation}<br>
+  ## Usage<br>
+  ${data.usage}<br>
+  ## License<br>
+  ${data.license}<br>
+  ## Contributors<br>
+  ${data.contributors}<br>
+  ## Tests<br>
+  ${data.tests}<br>
+  ## Questions<br>
+  My github username is ${data.username}.<br>
+  My email address is ${data.email}.<br>
+  If you have any question: ${data.questions}<br>`;
+  }
 
-// `${getLinkImage()} <br>
-`## Project Title: ${inputs.project_title}<br>
-## Description<br>
-${inputs.description}<br>
-## Installation<br>
-${inputs.installation}<br>
-## Usage<br>
-${inputs.usage}<br>
-## License<br>
-${inputs.license}<br>
-## Contributors<br>
-${inputs.contributors}<br>
-## Tests<br>
-${inputs.tests}<br>
-## Questions<br>
-My github username is ${inputs.username}.<br>
-My email address is ${inputs.email}.<br>
-If you have any question: ${inputs.questions}<br>`
-
-console.log(readme);
+function init(){
+  inquirer
+  .prompt(getData)
+  .then((inputs) => {
+  console.log("Generating Readme..."); 
+  writeToFile('readme.md', readMe({...inputs}))
+  });
 }
-readme(responses);
+init()
 
-fs.writeFile('readme.md', readme(responses) , (err) => err ? console.error(err) : console.log('Readme Created!'))
+
+//  , (err) => err ? console.error(err) : console.log('Readme Created!'))
 
