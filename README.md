@@ -1,37 +1,43 @@
-This is licensed under the Apache license 2.0 license.
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-##Table of Contents<br>
-<a href="#Description">Description</a><br>
-[Installation](#Installation)<br>
-[Usage](#Usage)<br>
-[License](#License)<br>
-[Contributors](#Contributors)<br>
-[Tests](#Tests)<br>
-<a href="#Questions">Questions</a><br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This is licensed under the MIT License license. 
+
+## Table of Contents
+
+[Description](#description)
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[License](#license)
+
+[Contributors](#contributors)
+
+[Tests](#tests)
+
+[Questions](#questions)
 
 
-## Project Title: 
+## Project Title: a
 
 ## Description
-
+a
 
 ## Installation
-v
+a
 
 ## Usage
-v
+a
 
 ## License
-Apache license 2.0
+MIT License
 
 ## Contributors
-v
+
 
 ## Tests
-v
+a
 
 ## Questions
-My github username is v.
-My email address is v.
-If you have any questions: 
+My github username is a.
+My email address is a.
+If you have any questions: a

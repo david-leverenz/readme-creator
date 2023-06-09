@@ -1,14 +1,21 @@
 function genHTML(data) {
-    return `This is licensed under the ${data.license} license.
+    return `${data.licenseLink} This is licensed under the ${data.license} license. 
 
-##Table of Contents<br>
-<a href="#Description">Description</a><br>
-[Installation](#Installation)<br>
-[Usage](#Usage)<br>
-[License](#License)<br>
-[Contributors](#Contributors)<br>
-[Tests](#Tests)<br>
-<a href="#Questions">Questions</a><br>
+## Table of Contents
+
+[Description](#description)
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[License](#license)
+
+[Contributors](#contributors)
+
+[Tests](#tests)
+
+[Questions](#questions)
 
 
 ## Project Title: ${data.project_title}
