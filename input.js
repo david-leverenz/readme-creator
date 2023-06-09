@@ -1,3 +1,4 @@
+// This file holds all of the questions called by the .prompt section of my init function.
 const askQuestions = [
     {
         type: 'input',

@@ -1,5 +1,11 @@
+// This function inserts the data collected from the user into a readme file template.
 function genHTML(data) {
-    return `${data.licenseLink} This is licensed under the ${data.license} license. 
+    return `${data.licenseLink} 
+
+## Project Title: ${data.project_title}
+
+## Description
+${data.description}
 
 ## Table of Contents
 
@@ -9,19 +15,13 @@ function genHTML(data) {
 
 [Usage](#usage)
 
-[License](#license)
-
 [Contributors](#contributors)
+
+[License](#license)
 
 [Tests](#tests)
 
 [Questions](#questions)
-
-
-## Project Title: ${data.project_title}
-
-## Description
-${data.description}
 
 ## Installation
 ${data.installation}
