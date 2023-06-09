@@ -37,6 +37,6 @@ As usual, Dom, Sam and Poornima contributed.
 N/A
 
 ## Questions
-My github username is david-leverenz.
-My email address is david.leverenz@gmail.com.
-If you have any questions: Please call Sam at home with any questions at any time of the day or night - 312-867-5309.
+My github profile is https://github.com/david-leverenz.<br>
+My email address is david.leverenz@gmail.com.<br>
+If you have any questions: Please call Sam at home with any questions at any time of the day or night - 312-867-5309.<br>

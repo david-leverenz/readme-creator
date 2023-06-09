@@ -39,9 +39,9 @@ ${data.contributors}
 ${data.tests}
 
 ## Questions
-My github username is ${data.username}.
-My email address is ${data.email}.
-If you have any questions: ${data.questions}
+My github profile is https://github.com/${data.username}.<br>
+My email address is ${data.email}.<br>
+If you have any questions: ${data.questions}<br>
 `;
 }
 
